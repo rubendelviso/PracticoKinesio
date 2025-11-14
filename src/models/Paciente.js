@@ -27,7 +27,7 @@ class Paciente{
 
     RealizarRutina(){ 
         const RutinaFiltrada = this.rutina.filter(ap => ap.PuedeUsarse(this))
-        
+        console.log(RutinaFiltrada)
         RutinaFiltrada.forEach(element => { element.UsarAparato(this)});
     }
 

@@ -91,10 +91,12 @@ describe("Pruebas generales",()=>{
     
         test("Verificando requerimientos los ultimos",() => {
             // una bicicleta, un minitramp, la misma bicicleta de nuevo, un magneto.
-            Leonardo.AgregarAparato(Aparatino)
+            
             Leonardo.AgregarAparato(magnet)
             Leonardo.AgregarAparato(Aparatino)
-            Leonardo.AgregarAparato(miniTram)
+            Leonardo.AgregarAparato(miniTram)            
+            Leonardo.AgregarAparato(Aparatino)
+
             Leonardo.RealizarRutina()
             // console.log("El paciente antes de usar aparatos",Leonardo)
             expect(Leonardo.getDolor()).toBe(1.8)
@@ -103,3 +105,10 @@ describe("Pruebas generales",()=>{
     })
 })
 
+// Dolor de Leonardo inicial es -> 10  . Se le descuentan -> 8, 1
+// //     y  su fortaleza pasa a ser 20+4  =  24
+// const Leonardo = new Paciente(40,20,10)
+// Magneto: el nivel de dolor disminuye en un 10%. Puede ser usado por cualquier persona.
+// Bicicleta: el nivel de dolor disminuye en 4 puntos, mientras que la fortaleza muscular suma 3 puntos. Solo puede ser usado por personas mayores a 8 años.
+
+10-1-4-4
