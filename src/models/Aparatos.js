@@ -17,7 +17,7 @@ class Bicicleta {
     // getFortalezaAparato(){ return this.fortaleza}
     PuedeUsarse(persona) {
 
-        if (persona.getEdad() < 8) return "no puede ser utilizado por personas menores a 8 años"
+        if (persona.getEdad() < 8) return false
         return true
 
     }
@@ -58,8 +58,8 @@ class MiniTramp {
 
     PuedeUsarse(persona) {
 
-        if (persona.getDolor() > 20) return "No puede utilizarse, el umbral de dolor debe ser menor a 20"
-        return true
+        if (persona.getEdad() > 20) return true
+        return false
 
     }
     UsarAparato(persona) {
